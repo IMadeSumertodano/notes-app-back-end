@@ -29,7 +29,8 @@ class NotesService {
   }
 
   async getNotes() {
-    const result = await this._pool.query("SEELCT * FROM notes");
+    const result = await this._pool.query("SELECT * FROM notes");
+
     return result.rows.map(mapDBToModel);
   }
 
@@ -44,13 +45,14 @@ class NotesService {
       throw new NotFoundError("Catatan tidak ditemukan");
     }
 
-    return result.rows.map(mapDBToModel);
+    const noteResult = result.rows.map(mapDBToModel);
+    return noteResult[0];
   }
 
   async editNoteById(id, { title, body, tags }) {
     const updatedAt = new Date().toISOString();
     const query = {
-      text: "UPDATE notes SET title = $1, body = $2, tags = $3, updated_at = $4, WHERE id = $5 RETURNING id",
+      text: "UPDATE notes SET title = $1, body = $2, tags = $3, updated_at = $4 WHERE id = $5 RETURNING id",
       values: [title, body, tags, updatedAt, id],
     };
 
