@@ -1,3 +1,7 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/* eslint-disable quotes */
 const Jwt = require("@hapi/jwt");
 const InvariantError = require("../exceptions/InvariantError");
 

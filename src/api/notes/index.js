@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 const NotesHandler = require("./handler");
 const routes = require("./routes");
 

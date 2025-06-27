@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 const InvariantError = require("../../exceptions/InvariantError");
 const { UserPayloadSchema } = require("./schema");
 

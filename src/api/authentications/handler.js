@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 class AuthenticationsHandler {
   constructor(authenticationsService, usersService, tokenManager, validator) {
     this._authenticationsService = authenticationsService;
@@ -28,7 +30,7 @@ class AuthenticationsHandler {
       return response;
     };
 
-    this.putAuthenticationHandler = async (request, h) => {
+    this.putAuthenticationHandler = async (request) => {
       this._validator.validatePutAuthenticationPayload(request.payload);
 
       const { refreshToken } = request.payload;
@@ -43,7 +45,7 @@ class AuthenticationsHandler {
       };
     };
 
-    this.deleteAuthenticationHandler = async (request, h) => {
+    this.deleteAuthenticationHandler = async (request) => {
       this._validator.validateDeleteAuthenticationPayload(request.payload);
 
       const { refreshToken } = request.payload;

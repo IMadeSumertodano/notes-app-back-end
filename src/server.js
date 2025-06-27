@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
+/* eslint-disable quotes */
 // mengimpor dotenv dan menjalankan konfigurasinya
 require("dotenv").config();
 

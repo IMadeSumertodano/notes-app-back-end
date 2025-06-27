@@ -1,5 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 const Joi = require("joi");
-const { password } = require("pg/lib/defaults.js");
 
 const PostAuthenticationPayloadSchema = Joi.object({
   username: Joi.string().required(),

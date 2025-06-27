@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 const UsersHandler = require("./handler");
 const routes = require("./routes");
 

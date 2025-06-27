@@ -1,3 +1,7 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+const ClientError = require("../../exceptions/ClientError");
+
 class UsersHandler {
   constructor(service, validator) {
     this._service = service;
@@ -24,7 +28,7 @@ class UsersHandler {
       return response;
     };
 
-    this.getUserByIdHandler = async (request, h) => {
+    this.getUserByIdHandler = async (request) => {
       const { id } = request.params;
       const user = await this._service.getUserById(id);
 

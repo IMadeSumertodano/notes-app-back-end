@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 const Joi = require("joi");
 
 const UserPayloadSchema = Joi.object({

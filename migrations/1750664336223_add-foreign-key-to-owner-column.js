@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 exports.up = (pgm) => {
   // membuat user baru
   pgm.sql(

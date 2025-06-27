@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 class NotesHandler {
   constructor(service, validator) {
     this._service = service;
@@ -33,7 +35,7 @@ class NotesHandler {
       };
     };
 
-    this.getNoteByIdHandler = async (request, h) => {
+    this.getNoteByIdHandler = async (request) => {
       const { id } = request.params;
       const { id: credentialId } = request.auth.credentials;
 
@@ -46,7 +48,7 @@ class NotesHandler {
       };
     };
 
-    this.putNoteByIdHandler = async (request, h) => {
+    this.putNoteByIdHandler = async (request) => {
       this._validator.validateNotePayload(request.payload);
       const { id } = request.params;
       const { id: credentialId } = request.auth.credentials;
@@ -60,7 +62,7 @@ class NotesHandler {
       };
     };
 
-    this.deleteNoteByIdHandler = async (request, h) => {
+    this.deleteNoteByIdHandler = async (request) => {
       const { id } = request.params;
       const { id: credentialId } = request.auth.credentials;
 

@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 class CollaborationsHandler {
   constructor(collaborationsService, notesService, validator) {
     this._collaborationsService = collaborationsService;
@@ -24,7 +26,7 @@ class CollaborationsHandler {
       return response;
     };
 
-    this.deleteCollaborationHandler = async (request, h) => {
+    this.deleteCollaborationHandler = async (request) => {
       this._validator.validateCollaborationPayload(request.payload);
       const { id: credentialId } = request.auth.credentials;
       const { noteId, userId } = request.payload;

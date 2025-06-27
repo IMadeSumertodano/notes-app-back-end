@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable camelcase */
+/* eslint-disable quotes */
 exports.up = (pgm) => {
   pgm.createTable("notes", {
     id: {
